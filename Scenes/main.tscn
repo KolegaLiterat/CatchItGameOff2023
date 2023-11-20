@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://fklqhiuvyscl"]
+
+[ext_resource type="Texture2D" uid="uid://rgc161ulcp8y" path="res://Assets/Background/background.png" id="1_bshqf"]
+
+[sub_resource type="Environment" id="Environment_m184y"]
+background_mode = 5
+
+[node name="Main" type="Node3D"]
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3.75045)
+environment = SubResource("Environment_m184y")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_bshqf")
