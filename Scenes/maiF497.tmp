@@ -2,26 +2,25 @@
 
 [ext_resource type="Texture2D" uid="uid://rgc161ulcp8y" path="res://Assets/Background/background.png" id="1_bshqf"]
 [ext_resource type="PackedScene" uid="uid://crjknwdr6rr10" path="res://Scenes/wooden_box.tscn" id="2_vlarp"]
-[ext_resource type="PackedScene" uid="uid://cpdx2pcekooln" path="res://Assets/3D/conveyor-bars-sides.glb" id="4_tmp5j"]
+
+[sub_resource type="Environment" id="Environment_m184y"]
+background_mode = 5
 
 [node name="Main" type="Node3D"]
 
 [node name="Camera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
-fov = 107.2
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3.75045)
+environment = SubResource("Environment_m184y")
 
 [node name="Background" type="Sprite3D" parent="."]
-transform = Transform3D(1.49739, 0, 0, 0, 1, 0, 0, 0, 0.729426, 0, 0, 0)
 texture = ExtResource("1_bshqf")
 
 [node name="WoodenBox" parent="." instance=ExtResource("2_vlarp")]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -3.59168, -4.9897, -1.2023)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+is_clicked = false
 metadata/_edit_group_ = true
 
 [node name="SceneLight" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.958123, 0.286357, 0, -0.286357, 0.958123, 0.597947, 1.73568, 2.02107)
 light_energy = 0.8
 light_volumetric_fog_energy = 0.0
-
-[node name="conveyor-bars-sides" parent="." instance=ExtResource("4_tmp5j")]
-transform = Transform3D(1, 0, 0, 0, 0.939693, -0.34202, 0, 0.34202, 0.939693, 1, 0, 1)
