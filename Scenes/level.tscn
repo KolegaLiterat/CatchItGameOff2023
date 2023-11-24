@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://3psfvaufo0v0"]
+
+[ext_resource type="PackedScene" uid="uid://bxtl4wnn778uv" path="res://Assets/3D/floor_kitchen_small.gltf" id="1_mo0uk"]
+
+[node name="Level" type="Node3D"]
+
+[node name="Floor" type="Node3D" parent="."]
+
+[node name="FloorTile0" parent="Floor" instance=ExtResource("1_mo0uk")]
+
+[node name="FloorTile1" parent="Floor" instance=ExtResource("1_mo0uk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.022, 0, 0)
+
+[node name="FloorTile2" parent="Floor" instance=ExtResource("1_mo0uk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="FloorTile3" parent="Floor" instance=ExtResource("1_mo0uk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="FloorTile4" parent="Floor" instance=ExtResource("1_mo0uk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="FloorTile5" parent="Floor" instance=ExtResource("1_mo0uk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="FloorTile6" parent="Floor" instance=ExtResource("1_mo0uk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="FloorTile7" parent="Floor" instance=ExtResource("1_mo0uk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="FloorTile8" parent="Floor" instance=ExtResource("1_mo0uk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)

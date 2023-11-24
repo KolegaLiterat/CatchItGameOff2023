@@ -1,14 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://fklqhiuvyscl"]
+[gd_scene load_steps=3 format=3 uid="uid://fklqhiuvyscl"]
 
+[ext_resource type="PackedScene" uid="uid://3psfvaufo0v0" path="res://Scenes/level.tscn" id="2_gjldn"]
 [ext_resource type="PackedScene" uid="uid://crjknwdr6rr10" path="res://Scenes/wooden_box.tscn" id="2_vlarp"]
 
 [node name="Main" type="Node3D"]
 
 [node name="Camera" type="Camera3D" parent="."]
-transform = Transform3D(0.965926, -0.183013, 0.183013, 0, 0.707107, 0.707107, -0.258819, -0.683013, 0.683013, -4.17699, 0, 1.52519)
+transform = Transform3D(0.862, -0.382149, 0.333043, 0.0385292, 0.704503, 0.708655, -0.505441, -0.598029, 0.622005, -1.41449, 4.29036, 7.49966)
 projection = 1
 fov = 107.2
-size = 6.095
+size = 5.0
+near = 0.001
 
 [node name="WoodenBox" parent="." instance=ExtResource("2_vlarp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.70277, -1.49657, 1.09069)
@@ -18,3 +20,6 @@ metadata/_edit_group_ = true
 transform = Transform3D(1, 0, 0, 0, 0.958123, 0.286357, 0, -0.286357, 0.958123, 0.597947, 1.73568, 2.02107)
 light_energy = 0.8
 light_volumetric_fog_energy = 0.0
+
+[node name="Level" parent="." instance=ExtResource("2_gjldn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.10237, -2.21939, 0.648888)
