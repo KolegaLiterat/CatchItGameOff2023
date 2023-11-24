@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cflkdhe4jujgd"]
+
+[ext_resource type="PackedScene" uid="uid://cenwg8reelhjk" path="res://Assets/3D/conveyor-long-sides.glb" id="1_l5iya"]
+
+[node name="Conveyor" type="Node3D"]
+
+[node name="Conveyor model" parent="." instance=ExtResource("1_l5iya")]
