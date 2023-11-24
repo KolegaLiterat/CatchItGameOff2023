@@ -8,6 +8,7 @@
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
+projection = 1
 fov = 107.2
 
 [node name="Background" type="Sprite3D" parent="."]
