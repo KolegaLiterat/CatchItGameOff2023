@@ -1,7 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cflkdhe4jujgd"]
+[gd_scene load_steps=3 format=3 uid="uid://cflkdhe4jujgd"]
 
 [ext_resource type="PackedScene" uid="uid://cenwg8reelhjk" path="res://Assets/3D/conveyor-long-sides.glb" id="1_l5iya"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x3fvp"]
 
 [node name="Conveyor" type="Node3D"]
 
 [node name="Conveyor model" parent="." instance=ExtResource("1_l5iya")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Conveyor model"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Conveyor model/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.521396, 0)
+shape = SubResource("BoxShape3D_x3fvp")
