@@ -6,7 +6,7 @@
 [node name="Main" type="Node3D"]
 
 [node name="Camera" type="Camera3D" parent="."]
-transform = Transform3D(0.862, -0.382149, 0.333043, 0.0385292, 0.704503, 0.708655, -0.505441, -0.598029, 0.622005, -1.41449, 4.29036, 7.49966)
+transform = Transform3D(0.862, -0.382149, 0.333043, 0.0385292, 0.704503, 0.708655, -0.505441, -0.598029, 0.622005, 3.50318, 4.29036, 5.08687)
 projection = 1
 fov = 107.2
 size = 5.0
@@ -23,10 +23,6 @@ shadow_blur = 0.5
 directional_shadow_mode = 0
 
 [node name="Level" parent="." instance=ExtResource("2_gjldn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.10237, -2.21939, 0.648888)
 
-[node name="Spawn" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.958123, 0.286357, 0, -0.286357, 0.958123, 0, 0, 0)
-
-[node name="Fruit" parent="Spawn" instance=ExtResource("2_2k8df")]
-transform = Transform3D(1, 0, 0, 0, 0.999998, -3.57628e-07, 0, 3.57628e-07, 0.999998, -7.33002, -1.48792, 2.96963)
+[node name="Fruit" parent="." instance=ExtResource("2_2k8df")]
+transform = Transform3D(1, 0, 0, 0, 0.999998, -3.57628e-07, 0, 3.57628e-07, 0.999998, 0, 1.56361, 2.55656)

@@ -11,10 +11,8 @@ script = ExtResource("1_yuggg")
 [node name="ModelCrate" parent="." instance=ExtResource("1_dgj7f")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="ModelCrate"]
+[node name="Body" type="CharacterBody3D" parent="ModelCrate"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ModelCrate/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ModelCrate/Body"]
 transform = Transform3D(2.14569, 0, 0, 0, 0.444831, 0, 0, 0, 1.94423, 0, 0.149311, 0.00317526)
 shape = SubResource("BoxShape3D_jht8g")
-
-[connection signal="input_event" from="ModelCrate/StaticBody3D" to="." method="_on_static_body_3d_input_event"]

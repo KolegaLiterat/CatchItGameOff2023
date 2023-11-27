@@ -13,13 +13,14 @@ script = ExtResource("1_jdnt8")
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 0, 0, 0)
 input_ray_pickable = false
+motion_mode = 1
 floor_stop_on_slope = false
 floor_constant_speed = true
 floor_block_on_wall = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(0.90166, 0.0598244, 0.428288, -0.431801, 0.0704552, 0.899213, 0.0236197, -0.995719, 0.0893589, 0, 0.113676, 0)
-shape = SubResource("CapsuleShape3D_fghst")
-
 [node name="Carrot" parent="CharacterBody3D" instance=ExtResource("1_5wov3")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(0.90166, 0.0598244, 0.428288, -0.431801, 0.0704552, 0.899213, 0.0236197, -0.995719, 0.0893589, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_fghst")

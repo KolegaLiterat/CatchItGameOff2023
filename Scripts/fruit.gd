@@ -8,6 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$CharacterBody3D.move_and_collide(Vector3(1, 0, 0) * delta * 3)
+	var collision = $CharacterBody3D.move_and_collide(Vector3(1, 0, 0) * delta)
 	
-	print(self.position)
+	if collision:
+		print("I collided with ", collision.get_collider().name)

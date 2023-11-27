@@ -9,10 +9,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(self.position)
-	
-func _on_static_body_3d_input_event(camera, event, position, normal, shape_idx):
-	var click = event as InputEventMouseButton
-	
-	if click and click.button_index == 1 and click.pressed:
-		is_clicked = true
+	pass
