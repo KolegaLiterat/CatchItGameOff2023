@@ -25,4 +25,4 @@ directional_shadow_mode = 0
 [node name="Level" parent="." instance=ExtResource("2_gjldn")]
 
 [node name="Fruit" parent="." instance=ExtResource("2_2k8df")]
-transform = Transform3D(1, 0, 0, 0, 0.999998, -3.57628e-07, 0, 3.57628e-07, 0.999998, 0, 1.56361, 2.55656)
+transform = Transform3D(1, 0, 0, 0, 0.999998, -3.57628e-07, 0, 3.57628e-07, 0.999998, -1, 1.71723, 2.55656)

@@ -7,9 +7,14 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
 
-func _physics_process(delta):
-	var collision = $CharacterBody3D.move_and_collide(Vector3(1, 0, 0) * delta)
-	
-	if collision:
-		print("HIT")
+#areas
+func _on_area_conv_0_body_entered(body):
+	print(body.name)
+
+
+func _on_area_conv_1_body_entered(body):
+	print(body.name)
+
