@@ -5,11 +5,5 @@ extends Node3D
 func _ready():
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-
 func _physics_process(delta):
-	var collision = $CharacterBody3D.move_and_collide(Vector3(1, 0, 0) * delta)
-	
-	if collision:
-		print("HIT")
+	$CharacterBody3D.move_and_collide(Vector3(1, 0, 0) * delta)

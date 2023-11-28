@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://fklqhiuvyscl"]
+[gd_scene load_steps=2 format=3 uid="uid://fklqhiuvyscl"]
 
-[ext_resource type="PackedScene" uid="uid://i3fjntq4lcxe" path="res://Scenes/fruit.tscn" id="2_2k8df"]
 [ext_resource type="PackedScene" uid="uid://3psfvaufo0v0" path="res://Scenes/level.tscn" id="2_gjldn"]
 
 [node name="Main" type="Node3D"]
@@ -23,6 +22,3 @@ shadow_blur = 0.5
 directional_shadow_mode = 0
 
 [node name="Level" parent="." instance=ExtResource("2_gjldn")]
-
-[node name="Fruit" parent="." instance=ExtResource("2_2k8df")]
-transform = Transform3D(1, 0, 0, 0, 0.999998, -3.57628e-07, 0, 3.57628e-07, 0.999998, -1, 1.71723, 2.55656)
