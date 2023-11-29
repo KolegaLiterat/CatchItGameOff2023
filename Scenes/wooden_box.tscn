@@ -1,18 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://crjknwdr6rr10"]
+[gd_scene load_steps=2 format=3 uid="uid://crjknwdr6rr10"]
 
 [ext_resource type="PackedScene" uid="uid://qnixnmolrsmu" path="res://Assets/3D/crate.gltf" id="1_dgj7f"]
-[ext_resource type="Script" path="res://Scenes/wooden_box.gd" id="1_yuggg"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_jht8g"]
 
 [node name="WoodenBox" type="Node3D"]
-script = ExtResource("1_yuggg")
 
 [node name="ModelCrate" parent="." instance=ExtResource("1_dgj7f")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
-
-[node name="Body" type="CharacterBody3D" parent="ModelCrate"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ModelCrate/Body"]
-transform = Transform3D(2.14569, 0, 0, 0, 0.444831, 0, 0, 0, 1.94423, 0, 0.149311, 0.00317526)
-shape = SubResource("BoxShape3D_jht8g")
