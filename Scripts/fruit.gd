@@ -8,11 +8,14 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-	print(is_moving)
+	pass
 		
 func _physics_process(delta):
-	if is_moving:
+	if is_moving == true:
 		self.move_and_collide(Vector3(1, 0, 0) * delta)
 	
-func _on_level_animate():
+func _on_level_animate(new_position):
 	is_moving = false
+	print(self.position)
+	self.position = new_position
+	print(self.position)
