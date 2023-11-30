@@ -46,8 +46,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93973, 0, 1)
 
 [node name="Area_Conv0" type="Area3D" parent="Belt/Conveyor0"]
 
-[node name="Collision" type="CollisionShape3D" parent="Belt/Conveyor0/Area_Conv0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16878, 1, 0)
+[node name="EndColision" type="CollisionShape3D" parent="Belt/Conveyor0/Area_Conv0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4092, 1, 0)
 shape = SubResource("BoxShape3D_c41gq")
 
 [node name="Conveyor1" parent="Belt" instance=ExtResource("2_h1ht7")]
@@ -105,7 +105,8 @@ curve = SubResource("Curve3D_x1x78")
 
 [node name="SecondPathRun" type="PathFollow3D" parent="Paths/Second Path"]
 unique_name_in_owner = true
-transform = Transform3D(-0.999971, 0.00196037, -0.00387237, 1.16413e-10, 0.892187, 0.451665, 0.00434023, 0.451661, -0.892178, -0.0131929, 0.894608, -0.869446)
+transform = Transform3D(-0.995939, 0.0448063, -0.0778387, -1.86261e-09, 0.86667, 0.498881, 0.0898118, 0.496865, -0.863167, -0.373828, 1.23563, -0.763148)
 loop = false
 
 [connection signal="animate" from="." to="Fruit" method="_on_level_animate"]
+[connection signal="body_entered" from="Belt/Conveyor0/Area_Conv0" to="Fruit" method="_on_area_conv_0_body_entered"]

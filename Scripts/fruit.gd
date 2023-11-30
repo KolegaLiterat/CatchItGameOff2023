@@ -19,3 +19,6 @@ func _on_level_animate(new_position):
 	print(self.position)
 	self.position = new_position
 	print(self.position)
+
+func _on_area_conv_0_body_entered(body):
+	body.queue_free()
