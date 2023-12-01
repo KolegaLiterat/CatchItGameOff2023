@@ -3,7 +3,7 @@ extends Node3D
 signal animate(new_position)
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -18,4 +18,5 @@ func _input(event):
 			$Fruit.reparent($"Paths/Second Path/SecondPathRun")
 			emit_signal("animate", Vector3(-0.700, 0.631, -0.948))
 			
-
+func _on_spawn_timer_timeout():
+	get_node("Fruit").instantiate()

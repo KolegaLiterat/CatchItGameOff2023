@@ -108,5 +108,9 @@ unique_name_in_owner = true
 transform = Transform3D(-0.995939, 0.0448063, -0.0778387, -1.86261e-09, 0.86667, 0.498881, 0.0898118, 0.496865, -0.863167, -0.373828, 1.23563, -0.763148)
 loop = false
 
+[node name="SpawnTimer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="animate" from="." to="Fruit" method="_on_level_animate"]
 [connection signal="body_entered" from="Belt/Conveyor0/Area_Conv0" to="Fruit" method="_on_area_conv_0_body_entered"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
